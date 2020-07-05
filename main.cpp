@@ -47,8 +47,8 @@ int main() {
 /*    HashMap m_hm;
     m_hm.run_hashmap();*/
 
-/*    m_string m_str;
-    m_str.run_mString();*/
+    m_string m_str;
+    m_str.run_mString();
 
 /*    Find_algorithm m_find;
     m_find.run_search();*/
@@ -56,8 +56,8 @@ int main() {
     stock m_stock;
     m_stock.run_stock();*/
 
-    MapSearch m_map;
-    m_map.run_map();
+/*    MapSearch m_map;
+    m_map.run_map();*/
 
     return 0;
  }

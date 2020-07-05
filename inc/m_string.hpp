@@ -39,6 +39,12 @@ https://www.nowcoder.com/practice/48b3cb4e3c694d9da5526e6255bb73c3?tpId=37&tqId=
     /*https://www.nowcoder.com/practice/03ba8aeeef73400ca7a37a5f3370fe68?tpId=37&tqId=21250&tPage=2&rp=&ru=%2Fta%2Fhuawei&qru=%2Fta%2Fhuawei%2Fquestion-ranking*/
     void m_map();
 
+    /*5. 最长回文子串
+     * https://leetcode-cn.com/problems/longest-palindromic-substring/*/
+    string longestPalindrome(string s);
+private:
+    int expandAroundCenter(string s, int left, int right);
+
 
 };
 #endif //UNTITLED_M_STRING_HPP

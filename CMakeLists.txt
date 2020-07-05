@@ -10,7 +10,8 @@ include_directories(
         inc/haspMap.hpp
         inc/m_string.hpp
         inc/Find_algorithm.hpp
-        inc/stock.hpp)
+        inc/stock.hpp
+        inc/priority_queue.hpp)
 
 add_library(
         code_lib
@@ -21,7 +22,8 @@ add_library(
         src/MStack.cpp
         src/DynamicPlan.cpp
         src/haspMap.cpp
-        src/m_string.cpp src/Find_algorithm.cpp src/Tree.cpp inc/Tree.hpp src/stock.cpp src/map_search.cpp inc/map_search.hpp)
+        src/m_string.cpp src/Find_algorithm.cpp src/Tree.cpp inc/Tree.hpp src/stock.cpp src/map_search.cpp inc/map_search.hpp
+        src/priority_queue.cpp)
 
 add_executable(code main.cpp )
 target_link_libraries(code code_lib)

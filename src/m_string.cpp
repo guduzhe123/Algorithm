@@ -51,7 +51,11 @@ void m_string:: run_mString() {
 //    getStr();
 //    m_ascii();
 //    map_cout();
-    m_map ();
+//    m_map ();
+
+    string s = "babadcababa";
+    cout << s<< endl;
+    longestPalindrome(s);
 }
 
 void m_string::getStr() {
@@ -183,6 +187,31 @@ void m_string::m_map () {
     }
     cout << count << endl;
     cout << brother[out - 1] << endl;
+}
+
+string m_string::longestPalindrome(string s) {
+    if ( s.size() < 1) return "";
+    int start = 0, end = 0;
+    for (int i = 0; i < s.size(); i++) {
+        int len1 = expandAroundCenter(s, i, i);
+        int len2 = expandAroundCenter(s, i, i+1);
+        int len = max(len1, len2);
+        if (len > end - start) {
+            start = i - (len - 1) /2;
+            end = i + len/2;
+        }
+    }
+    cout << s.substr(start, end);
+    return s.substr(start, end+1);
+}
+
+int m_string::expandAroundCenter(string s, int left, int right) {
+    int L = left, R = right;
+    while (L >= 0 && R < s.size() && s[L] == s[R]) {
+        L--;
+        R++;
+    }
+    return R-L-1;
 }
 
 
