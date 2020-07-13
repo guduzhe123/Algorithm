@@ -4,6 +4,8 @@
 
 #include "../inc/haspMap.hpp"
 #include "map"
+#include <hash_map>
+using namespace std;
 
 void HashMap::romanToInt(string s) {
     cout << "s = " << s <<endl;

@@ -8,6 +8,8 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include <map>
+#include <hash_map>
 using namespace std;
 
 /**
@@ -36,5 +38,10 @@ public:
 给定二叉树: [3,9,20,null,null,15,7],*/
     vector<vector<int>> levelOrder(TreeNode* root);
     void run_tree();
+    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder);
+    TreeNode* recur(int pre_left, int pre_right, int in_left, int in_right);
+
+    map<int, int> my_map;
+    vector<int> poc;
 };
 #endif //UNTITLED_TREE_HPP

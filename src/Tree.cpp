@@ -27,6 +27,29 @@ vector<vector<int>> Tree::levelOrder(TreeNode* root){
     return result;
 }
 
+
+
+Tree::TreeNode* Tree::buildTree(vector<int>& preorder, vector<int>& inorder) {
+    poc = preorder;
+    __gnu_cxx::hash_map<int, int> my_hash;
+
+    for (int i = 0; i < inorder.size(); i++) {
+        my_map[inorder[i]] = i;
+    }
+    return recur(0, preorder.size() -1, 0, inorder.size() - 1);
+}
+
+Tree::TreeNode* Tree::recur(int pre_left, int pre_right, int in_left, int in_right) {
+    if (pre_left > pre_right || in_left > in_right) return nullptr;
+
+    int i = my_map[poc[pre_left]];
+    TreeNode *root = new TreeNode(poc[pre_left]);
+
+    root->left = recur(pre_left + 1, i - in_left + pre_left, in_left, i - 1);
+    root->right = recur(i - in_left + pre_left + 1, pre_right, i + 1, in_right);
+    return root;
+}
+
 void Tree::run_tree () {
     TreeNode* root;
     root = new TreeNode(1);
