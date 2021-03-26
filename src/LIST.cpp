@@ -6,6 +6,7 @@
 //LeetCode 2. 两数相加
 LIST::ListNode *LIST::addTwoNumbers(LIST::ListNode *l1, LIST::ListNode *l2) {
     ListNode* cur = new ListNode(-1);
+//    ListNode* result = new ListNode(-1);
     ListNode* result = cur;
     int carry = 0;
     int sum = 0;
@@ -57,8 +58,17 @@ void LIST::listRun() {
     addToList(l2, 9);
     printList(l2);
 
+    ListNode* head = new LIST::ListNode(1);
+    addToList(head, 2);
+    addToList(head, 3);
+    addToList(head, 3);
+    addToList(head, 2);
+    addToList(head, 8);
+    printList(head);
+
 //    ListNode* l3 = addTwoNumbers(l1, l2);
-    ListNode* l3 = mergeTwoLists(l1, l2);
+//    ListNode* l3 = mergeTwoLists(l1, l2);
+    ListNode* l3 = removeDuplicateNodes(head);
     printList(l3);
     cout << " " <<endl;
 }
@@ -103,6 +113,24 @@ LIST::ListNode *LIST::reverseList(LIST::ListNode *head) {
 
     }
     return preNode;
+}
+
+LIST::ListNode* LIST::removeDuplicateNodes(LIST::ListNode* head) {
+    if (head == nullptr) return head;
+    map<int, int> nodes;
+    nodes[head->val] = 1;
+    ListNode* result = head;
+    while (result->next != NULL) {
+        ListNode* cur = result->next;
+        if (nodes[cur->val] != 1) {
+            nodes[cur->val] = 1;
+            result =  result->next;
+        } else {
+            result->next = result->next->next;
+        }
+    }
+    result->next = nullptr;
+    return head;
 }
 
 

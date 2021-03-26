@@ -2,7 +2,7 @@
 // Created by zhouhua on 2020/3/11.
 //
 
-#include "../inc/Tree.hpp"
+#include "../../inc/BT/Tree.hpp"
 
 vector<vector<int>> Tree::levelOrder(TreeNode* root){
     vector<vector<int>> result;

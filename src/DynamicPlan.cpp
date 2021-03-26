@@ -48,5 +48,4 @@ int DynamicPlan::coinCalcultae(vector<int> &coins, int amount) {
     if (amount < 1) return 0;
     count_.resize(amount);
     return coinChange(coins, amount);
-
 }

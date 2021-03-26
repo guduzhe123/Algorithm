@@ -9,6 +9,7 @@
 #include "inc/Find_algorithm.hpp"
 #include "inc/stock.hpp"
 #include "inc/map_search.hpp"
+#include "inc/priority_queue.hpp"
 using namespace std;
 
 // number of the total: n . Move form 'x' -> 'z' by using 'y'
@@ -47,8 +48,8 @@ int main() {
 /*    HashMap m_hm;
     m_hm.run_hashmap();*/
 
-    m_string m_str;
-    m_str.run_mString();
+/*    m_string m_str;
+    m_str.run_mString();*/
 
 /*    Find_algorithm m_find;
     m_find.run_search();*/
@@ -58,6 +59,9 @@ int main() {
 
 /*    MapSearch m_map;
     m_map.run_map();*/
+
+    PriorityQueue m_queue;
+    m_queue.myFunction();
 
     return 0;
  }
