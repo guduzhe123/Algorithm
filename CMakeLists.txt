@@ -39,3 +39,19 @@ add_executable(createBT src/BT/creatBT/createBT.cpp inc/BT/createBT/createBT.hpp
 
 add_executable(commonAncestor src/BT/lowestCommonAncestor/lowestCommonAncestor.cpp
         inc/BT/lowestCommonAncestor/lowestCommonAncestor.hpp)
+
+add_executable(InsertTree src/BT/InsertTree/InsertTree.cpp
+        inc/BT/InsertTree/InsertTree.hpp)
+
+add_executable(partition src/BackStep/partition/partition.cpp
+        inc/BackStep/partition.hpp)
+
+add_executable(restorIP src/BackStep/restoreIpAddresses/restoreIpAddresses.cpp
+        inc/BackStep/restoreIpAddresses.hpp)
+
+add_executable(findSubsequences src/BackStep/findSubsequences/findSubsequences.cpp
+        inc/BackStep/findSubsequences.hpp)
+
+add_executable(permute src/BackStep/permute/permute.cpp
+        inc/BackStep/permute.hpp)
+
